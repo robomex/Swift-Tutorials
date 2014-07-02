@@ -1,5 +1,5 @@
 // TreeHouse's Absolute Beginner's Guide to Swift
-
+/*
 let languageName = "Swift" // inferred as String
 
 var version = 1.0 // inferred as Double
@@ -57,11 +57,99 @@ func buildCard(cardName: String, cardValue: Int) -> String {
 }
 
 buildCard("Jack", 11)
-
+*/
 
 // Ray Wenderlich's Swift Tutorial: A Quick Start
 
-let tutorialTeam = 56
-let editorialTeam = 23
-var totalTeam = tutorialTeam + editorialTeam
-totalTeam += 1
+//let tutorialTeam = 56
+//let editorialTeam = 23
+//var totalTeam = tutorialTeam + editorialTeam
+//totalTeam += 1
+
+
+// Tip Calculator
+
+//1 
+
+class TipCalculator {
+    // 2
+    let total: Double
+    let taxPct: Double
+    let subtotal: Double
+    
+    // 3
+    init(total:Double, taxPct:Double) {
+        // append the self. prefix before the class property names, not the method parameters
+        self.total = total
+        self.taxPct = taxPct
+        subtotal = total / (taxPct + 1)
+    }
+    
+    // 4 
+    func calcTipWithTipPct(tipPct:Double) -> Double {
+        return subtotal * tipPct
+    }
+    
+    // 5
+    func printPossibleTips() {
+        println("15%: \(calcTipWithTipPct(0.15))")
+        println("18%: \(calcTipWithTipPct(0.18))")
+        println("20%: \(calcTipWithTipPct(0.20))")
+    }
+}
+
+// 6
+let tipCalc = TipCalculator(total: 33.25, taxPct: 0.06)
+tipCalc.printPossibleTips()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
