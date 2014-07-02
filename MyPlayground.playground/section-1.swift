@@ -61,3 +61,7 @@ buildCard("Jack", 11)
 
 // Ray Wenderlich's Swift Tutorial: A Quick Start
 
+let tutorialTeam = 56
+let editorialTeam = 23
+var totalTeam = tutorialTeam + editorialTeam
+totalTeam += 1
