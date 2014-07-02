@@ -91,17 +91,21 @@ class TipCalculator {
     }
     
     // 5
-    func printPossibleTips() {
+    func returnPossibleTips() -> Dictionary<Int, Double> {
         let possibleTips = [0.15, 0.18, 0.20]
+        
+        var retval = Dictionary<Int, Double>()
         for possibleTip in possibleTips {
-            println("\(possibleTip*100)%: \(calcTipWithTipPct(possibleTip))")
+            let intPct = Int(possibleTip*100)
+            retval[intPct] = calcTipWithTipPct(possibleTip)
         }
+        return retval
     }
 }
 
 // 6
 let tipCalc = TipCalculator(total: 33.25, taxPct: 0.06)
-tipCalc.printPossibleTips()
+tipCalc.returnPossibleTips()
 
 
 
